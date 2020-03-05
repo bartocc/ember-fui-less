@@ -13,11 +13,12 @@ module.exports = {
     const accordionModulePath = "/definitions/modules/accordion.js";
     let res = resolve.sync(`fomantic-ui-less${accordionModulePath}`, { basedir: __dirname });
     const fuiLessPath = res.replace(accordionModulePath, '');
+    const appRoot = app.options.configPath.replace('/config/environment', '');
 
     app.options["lessOptions"]["paths"].push(
       fuiLessPath,
-      './app/styles/fomantic',
-      './app/styles/fomantic/dummy-path-to-import/theme.config'
+      `${appRoot}/app/styles/fomantic`,
+      `${appRoot}/app/styles/fomantic/dummy-path-to-import/theme.config`
     );
   }
 
