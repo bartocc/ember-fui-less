@@ -1,6 +1,6 @@
 {
   "name": "ember-fui-less",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Configure an ember-cli app to use fomantic-ui-less",
   "keywords": [
     "ember-addon"
