@@ -11,8 +11,8 @@ jobs:
     - name: yarn
       run: yarn
 
-    - name: test ember-cli-fui-less
-      run: yarn workspace ember-cli-fui-less test
+    - name: test ember-fui-less
+      run: yarn workspace ember-fui-less test
 
     - name: test test-app
       run: yarn workspace test-app test

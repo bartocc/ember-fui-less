@@ -3,7 +3,7 @@
 ## Installation
 
 * `git clone <repository-url>`
-* `cd ember-cli-fui-less`
+* `cd ember-fui-less`
 * `yarn install`
 
 ## Linting

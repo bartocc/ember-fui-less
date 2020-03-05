@@ -1,4 +1,4 @@
-ember-cli-fui-less
+ember-fui-less
 ==============================================================================
 
 [Short description of the addon.]
@@ -16,7 +16,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-cli-fui-less
+ember install ember-fui-less
 ```
 
 
