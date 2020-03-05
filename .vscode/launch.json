@@ -7,8 +7,16 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "ember test",
+      "name": "[ember-cli-fui-less] ember test",
       "cwd": "${workspaceFolder}/packages/ember-cli-fui-less",
+      "program": "${workspaceFolder}/node_modules/ember-cli/bin/ember",
+      "args": ["test"],
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "[test-app] ember test",
+      "cwd": "${workspaceFolder}/test-packages/test-app",
       "program": "${workspaceFolder}/node_modules/ember-cli/bin/ember",
       "args": ["test"],
     }
