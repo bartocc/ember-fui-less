@@ -5,7 +5,10 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bartocc/ember-fui-less.git"
+  },
   "license": "MIT",
   "author": "Julien Palmas",
   "directories": {
