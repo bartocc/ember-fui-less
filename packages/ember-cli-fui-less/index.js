@@ -13,7 +13,12 @@ module.exports = {
     const accordionModulePath = "/definitions/modules/accordion.js";
     let res = resolve.sync(`fomantic-ui-less${accordionModulePath}`, { basedir: __dirname });
     const fuiLessPath = res.replace(accordionModulePath, '');
-    const appRoot = app.options.configPath.replace('/config/environment', '');
+    let appRoot;
+
+    if (app.project.isEmberCLIAddon())
+      appRoot= app.options.configPath.replace('/config/environment', '');
+    else
+      appRoot = app.project.root
 
     app.options["lessOptions"]["paths"].push(
       fuiLessPath,
