@@ -1,6 +1,6 @@
 {
   "name": "ember-fui-less",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Configure an ember-cli app to use fomantic-ui-less",
   "keywords": [
     "ember-addon",
@@ -81,7 +81,9 @@
   },
   "release-it": {
     "hooks": {
-      "before:npm:release": ["copyfiles copyfiles -V ../../README.md packages/ember-fui-less"]
+      "before:npm:release": [
+        "copyfiles copyfiles -V ../../README.md packages/ember-fui-less"
+      ]
     },
     "git": {
       "tagName": "v${version}"
