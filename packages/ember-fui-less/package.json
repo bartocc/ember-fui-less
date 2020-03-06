@@ -78,7 +78,7 @@
     "release-it": "^12.6.3"
   },
   "engines": {
-    "node": "8.5.* || >= 10.*"
+    "node": ">= 9.9.*"
   },
   "ember": {
     "edition": "octane"

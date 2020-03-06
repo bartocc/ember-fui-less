@@ -4,10 +4,11 @@ const resolve = require("resolve");
 const fs = require("fs");
 const chalk = require("chalk");
 const debug = require("debug")("ember-fui-less:blueprints:fui-variables");
+const assert = require("assert").strict;
 
 module.exports = {
   description:
-    "Generates a fomantic-ui theme file in app/styles/fomantic/site/<type>s/<element>.variables",
+    "Generates a fomantic-ui theme file in app/styles/fomantic/site/<type>s/<element>.<extension>",
 
   availableOptions: [
     {
@@ -19,6 +20,11 @@ module.exports = {
       name: "element",
       type: String,
       default: ""
+    },
+    {
+      name: "extension",
+      type: String,
+      default: "variables"
     }
   ],
 
@@ -31,17 +37,17 @@ module.exports = {
     return entityName;
   },
 
-  beforeInstall({ type, element }) {
-    if (!["global", "element", "collection", "view"].includes(type)) {
-      this.ui.writeLine(
-        chalk.yellow(
-          `--type must be one of "global", "element", "collection" or "view"`
-        )
-      );
-      throw "";
-    }
+  beforeInstall({ type, element, extension = "variables" }) {
+    assert.ok(
+      ["global", "element", "collection", "view"].includes(type),
+      `--type must be one of "global", "element", "collection" or "view"`
+    );
+    assert.ok(
+      ["variables", "overrides"].includes(extension),
+      `--extension must be one of "variables", "overrides"`
+    );
 
-    const fileName = `${element}.variables`;
+    const fileName = `${element}.${extension}`;
     const filePathToResolve = `fomantic-ui-less/_site/${type}s/${fileName}`;
 
     this.filePath = `__root__/styles/fomantic/site/${type}s/${fileName}`;
