@@ -75,5 +75,10 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "release-it": {
+    "git": {
+      "tagName": "v${version}"
+    }
   }
 }
