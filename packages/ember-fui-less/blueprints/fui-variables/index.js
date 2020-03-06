@@ -7,7 +7,7 @@ const debug = require("debug")("ember-fui-less:blueprints:fui-variables");
 
 module.exports = {
   description:
-    "Generates a fomantic-ui theme file in app/styles/fomantic/site/<type>/<element>.variables",
+    "Generates a fomantic-ui theme file in app/styles/fomantic/site/<type>s/<element>.variables",
 
   availableOptions: [
     {

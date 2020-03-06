@@ -25,6 +25,7 @@ to be able to `@import` the fomantic-ui-less source files from your app's less f
   - [Theming](#theming)
 - [Contributing](#contributing)
 - [License](#license)
+- [Credits](#credits)
 
 ## Installation
 
@@ -87,7 +88,35 @@ In `app/styles/fomantic/semantic.less`, Make sure you comment out every one of t
 
 ### Theming
 
-TODO
+You can easily use the [theming](https://fomantic-ui.com/usage/theming.html) system of fomantic-ui with ember-fui-less.
+
+This addon provides blueprints to generate the files necessary to customize the [site](https://fomantic-ui.com/usage/theming.html#sitewide-defaults) theme.
+
+For example, you could start building the site theme of your application with:
+
+```shell
+ember generate fui-variables --type="global" --element="site"
+```
+
+This would create the file `app/styles/fomantic/site/globas/site.variables`.
+This file is by default empty (if you except the comments).
+You could then modify the primary color:
+
+```less
+@primaryColor: red;
+```
+
+and check the result by adding a primary button in one of your templates:
+
+```hbs
+<button class="ui primary button" type="button">
+  A Primary Button
+</button>
+```
+
+Fomantic-ui has **MANY** variables available to configure your theme, and that can be quite overwhelming.
+The best way to grasp the power of theming is to read through the default theme variables file,
+for example [themes/default/globals/site.variables](https://github.com/fomantic/Fomantic-UI-LESS/blob/master/themes/default/globals/site.variables)
 
 ## Contributing
 
@@ -96,3 +125,7 @@ See the [Contributing](CONTRIBUTING.md) guide for details.
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).
+
+## Credits
+
+Yarn workspace test-packages setup idea inspired from [ember-css-modules](https://github.com/salsify/ember-css-modules)
