@@ -28,7 +28,8 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "test:all": "ember try:each"
+    "test:all": "ember try:each",
+    "release": "release-it"
   },
   "dependencies": {
     "debug": "^4.1.1",
