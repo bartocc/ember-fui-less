@@ -30,6 +30,7 @@
     "test": "ember test",
     "test:all": "ember try:each",
     "release": "release-it",
+    "foo": "rm README.md",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
@@ -82,7 +83,10 @@
   "release-it": {
     "hooks": {
       "before:npm:release": [
-        "copyfiles copyfiles -V ../../README.md packages/ember-fui-less"
+        "copyfiles ../../README.md packages/ember-fui-less"
+      ],
+      "after:npm:release": [
+        "rm README.md"
       ]
     },
     "git": {
