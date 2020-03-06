@@ -2558,6 +2558,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"auto-changelog@npm:^1.16.2":
+  version: 1.16.2
+  resolution: "auto-changelog@npm:1.16.2"
+  dependencies:
+    commander: ^3.0.1
+    core-js: ^3.2.1
+    handlebars: ^4.1.2
+    lodash.uniqby: ^4.7.0
+    node-fetch: ^2.6.0
+    parse-github-url: ^1.0.2
+    regenerator-runtime: ^0.13.3
+    semver: ^6.3.0
+  bin:
+    auto-changelog: ./lib/index.js
+  checksum: 2/c142373d5a017c592ac90621ec95bd98f043fc26dc0383cdd5c322f3225604df3cd180bc6de668aea0cf800443f8bff543c48a98ccf54fd5d3a6acfbe21faf99
+  languageName: node
+  linkType: hard
+
 "aws-sign2@npm:~0.7.0":
   version: 0.7.0
   resolution: "aws-sign2@npm:0.7.0"
@@ -5111,6 +5129,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^3.0.1":
+  version: 3.0.2
+  resolution: "commander@npm:3.0.2"
+  checksum: 2/28071a49d23606c1e31f1f275d2aac9c03833cb3442e04b798ffbcd5f7fb7a1fbfc6b5bc6a69b862df83f475378665623788118d189c254a173248c452bd77a2
+  languageName: node
+  linkType: hard
+
 "commander@npm:^4.1.1":
   version: 4.1.1
   resolution: "commander@npm:4.1.1"
@@ -5374,6 +5399,13 @@ __metadata:
   version: 2.6.11
   resolution: "core-js@npm:2.6.11"
   checksum: 2/39ad00b46deaecf344470ef940949b58c4b15e71608a98e8ac7429cd16e485b829f9720d44a44b5f4dee966ff04a18baf5283feb8aaba2cb59ce2c25fa72b88c
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^3.2.1":
+  version: 3.6.4
+  resolution: "core-js@npm:3.6.4"
+  checksum: 2/30c4178f2b88e758b4202daf0b8651efd0c6a9f058b50638b1194614c15d31da83a504278b448da1385a594e27dbfcdf2d4bea8d6c6115fbe5cfef0b8734404c
   languageName: node
   linkType: hard
 
@@ -6576,6 +6608,7 @@ __metadata:
   dependencies:
     "@ember/optional-features": ^1.1.0
     "@glimmer/component": ^1.0.0
+    auto-changelog: ^1.16.2
     babel-eslint: ^10.1.0
     broccoli-asset-rev: ^3.0.0
     debug: ^4.1.1
@@ -8551,7 +8584,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars@npm:^4.0.11, handlebars@npm:^4.0.4, handlebars@npm:^4.3.1, handlebars@npm:^4.5.1, handlebars@npm:^4.7.3":
+"handlebars@npm:^4.0.11, handlebars@npm:^4.0.4, handlebars@npm:^4.1.2, handlebars@npm:^4.3.1, handlebars@npm:^4.5.1, handlebars@npm:^4.7.3":
   version: 4.7.3
   resolution: "handlebars@npm:4.7.3"
   dependencies:
@@ -11816,6 +11849,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parse-github-url@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "parse-github-url@npm:1.0.2"
+  bin:
+    parse-github-url: ./cli.js
+  checksum: 2/60fa1f025ed38359885be81ec7b231a16942a4f5a86fa49285ce64663b921501200e9dfe6ce270ccd29e6dce32f56be676865773bd98cc01dca098d9c6ada978
+  languageName: node
+  linkType: hard
+
 "parse-json@npm:^4.0.0":
   version: 4.0.0
   resolution: "parse-json@npm:4.0.0"
@@ -12596,7 +12638,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.4":
+"regenerator-runtime@npm:^0.13.3, regenerator-runtime@npm:^0.13.4":
   version: 0.13.4
   resolution: "regenerator-runtime@npm:0.13.4"
   checksum: 2/d6165e7ba67f28f813a28fc07aa0c771ae8df913a3277c0aa837957d72debc4f1df4f53a6e98636c1cc87c6ba643ce8c522eb36542bbc4234c645af9d992c7c2
