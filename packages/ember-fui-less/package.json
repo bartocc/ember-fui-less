@@ -88,6 +88,7 @@
   },
   "release-it": {
     "hooks": {
+      "before:init": ["yarn workspace ember-fui-less test", "yarn workspace test-app test"],
       "before:npm:release": [
         "copyfiles ../../README.md packages/ember-fui-less"
       ],
