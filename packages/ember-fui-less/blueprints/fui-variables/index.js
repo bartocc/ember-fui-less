@@ -23,7 +23,7 @@ module.exports = {
   ],
 
   files() {
-    return [this.file];
+    return [this.filePath];
   },
 
   normalizeEntityName(entityName) {
@@ -31,9 +31,7 @@ module.exports = {
     return entityName;
   },
 
-  beforeInstall(options) {
-    const { type, element, project } = options;
-
+  beforeInstall({ type, element }) {
     if (!["global", "element", "collection", "view"].includes(type)) {
       this.ui.writeLine(
         chalk.yellow(
@@ -46,8 +44,8 @@ module.exports = {
     const fileName = `${element}.variables`;
     const filePathToResolve = `fomantic-ui-less/_site/${type}s/${fileName}`;
 
-    this.file = `__root__/styles/fomantic/site/${type}s/${fileName}`;
-    const destFile = `${project.root}/blueprints/fui-variables/files/${this.file}`;
+    this.filePath = `__root__/styles/fomantic/site/${type}s/${fileName}`;
+    const destFile = `${this.filesPath()}/${this.filePath}`;
 
     let srcFile;
     try {
@@ -66,5 +64,13 @@ module.exports = {
       );
       throw "";
     }
+  },
+
+  async afterInstall() {
+    this.files().forEach(path => {
+      const fullPath = `${this.filesPath()}/${path}`;
+      debug("unlinking file %o", fullPath);
+      fs.unlinkSync(fullPath);
+    });
   }
 };
