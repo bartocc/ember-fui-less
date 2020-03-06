@@ -30,7 +30,8 @@
     "test": "ember test",
     "test:all": "ember try:each",
     "release": "release-it",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "foo": "copyfiles README.md packages/"
   },
   "dependencies": {
     "debug": "^4.1.1",
@@ -44,6 +45,7 @@
     "auto-changelog": "^1.16.2",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
+    "copyfiles": "^2.2.0",
     "ember-auto-import": "^1.5.3",
     "ember-cli": "~3.15.2",
     "ember-cli-dependency-checker": "^3.2.0",
@@ -79,6 +81,9 @@
     "configPath": "tests/dummy/config"
   },
   "release-it": {
+    "hooks": {
+      "before:npm:release": ["copyfiles ../../README.md ./README.md"]
+    },
     "git": {
       "tagName": "v${version}"
     }
