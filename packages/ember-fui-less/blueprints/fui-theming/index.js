@@ -2,8 +2,11 @@
 
 const resolve = require("resolve");
 const fs = require("fs");
+const path = require("path");
 const chalk = require("chalk");
-const debug = require("debug")("ember-fui-less:blueprints:fui-variables");
+const debug = require("debug")(
+  `ember-fui-less:blueprints:${path.basename(__dirname)}`
+);
 const assert = require("assert").strict;
 
 module.exports = {
@@ -28,13 +31,10 @@ module.exports = {
     }
   ],
 
+  normalizeEntityName() {},
+
   files() {
     return [this.filePath];
-  },
-
-  normalizeEntityName(entityName) {
-    // Normalize and validate entity name here
-    return entityName;
   },
 
   beforeInstall({ type, element, extension = "variables" }) {

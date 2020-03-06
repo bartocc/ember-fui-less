@@ -90,12 +90,12 @@ In `app/styles/fomantic/semantic.less`, Make sure you comment out every one of t
 
 You can easily use the [theming](https://fomantic-ui.com/usage/theming.html) system of fomantic-ui with ember-fui-less.
 
-This addon provides blueprints to generate the files necessary to customize the [site](https://fomantic-ui.com/usage/theming.html#sitewide-defaults) theme.
+This addon provides the `fui-theming` blueprint to generate the files necessary to customize the [site](https://fomantic-ui.com/usage/theming.html#sitewide-defaults) theme.
 
 For example, you could start building the site theme of your application with:
 
 ```shell
-ember generate fui-variables --type="global" --element="site"
+ember generate fui-theming --type="global" --element="site"
 ```
 
 This would create the file `app/styles/fomantic/site/globas/site.variables`.

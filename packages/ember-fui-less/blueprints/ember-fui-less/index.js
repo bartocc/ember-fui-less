@@ -1,8 +1,9 @@
 const fs = require("fs");
+const path = require("path");
 const resolve = require("resolve");
-const debug = require("debug")("ember-fui-less:default-blueprint");
-
-// fs.existsSync(`${__dirname}/js/addon.js`);
+const debug = require("debug")(
+  `ember-fui-less:blueprints:${path.basename(__dirname)}`
+);
 
 module.exports = {
   normalizeEntityName() {},
