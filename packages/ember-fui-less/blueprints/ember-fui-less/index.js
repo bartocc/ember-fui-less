@@ -51,45 +51,6 @@ module.exports = {
       `${locals.fileMap["__root__"]}/styles/app.less`,
       "@import 'app/styles/fomantic/semantic';"
     );
-    await this.insertIntoFile(
-      `${locals.fileMap["__root__"]}/styles/fomantic/semantic.less`,
-      "/* Uncomment below the FUI elements you need",
-      { after: "/* Elements */" }
-    );
-    await this.insertIntoFile(
-      `${locals.fileMap["__root__"]}/styles/fomantic/semantic.less`,
-      "end of elements whitelist */",
-      { before: "/* Collections */" }
-    );
-    await this.insertIntoFile(
-      `${locals.fileMap["__root__"]}/styles/fomantic/semantic.less`,
-      "/* Uncomment below the FUI collections you need",
-      { after: "/* Collections */" }
-    );
-    await this.insertIntoFile(
-      `${locals.fileMap["__root__"]}/styles/fomantic/semantic.less`,
-      "end of collections whitelist */",
-      { before: "/* Views */" }
-    );
-    await this.insertIntoFile(
-      `${locals.fileMap["__root__"]}/styles/fomantic/semantic.less`,
-      "/* Uncomment below the FUI Views you need",
-      { after: "/* Views */" }
-    );
-    await this.insertIntoFile(
-      `${locals.fileMap["__root__"]}/styles/fomantic/semantic.less`,
-      "end of views whitelist */",
-      { before: "/* Modules */" }
-    );
-    await this.insertIntoFile(
-      `${locals.fileMap["__root__"]}/styles/fomantic/semantic.less`,
-      "/* Uncomment below the FUI Modules you need",
-      { after: "/* Modules */" }
-    );
-    await this.insertIntoFile(
-      `${locals.fileMap["__root__"]}/styles/fomantic/semantic.less`,
-      "end of modules whitelist */"
-    );
   },
 
   async afterInstall() {
