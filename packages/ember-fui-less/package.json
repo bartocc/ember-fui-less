@@ -3,7 +3,8 @@
   "version": "0.1.4",
   "description": "Configure an ember-cli app to use fomantic-ui-less",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "fomantic-ui"
   ],
   "repository": {
     "type": "git",
