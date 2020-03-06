@@ -58,7 +58,32 @@ The `app/styles/fomantic` content is supposed to mimic the one found in `node_mo
 
 ⚠️ By default, every fomantic-ui [Globals](https://github.com/fomantic/Fomantic-UI-LESS/tree/master/definitions/globals), [Elements](https://github.com/fomantic/Fomantic-UI-LESS/tree/master/definitions/elements), [Collections](https://github.com/fomantic/Fomantic-UI-LESS/tree/master/definitions/collections) and [Views](https://github.com/fomantic/Fomantic-UI-LESS/tree/master/definitions/views) will be `@import`ed by in `app/styles/fomantic/semantic.less`. This will result in a slower build time for your app!⚠️
 
-❗ **Make sure you comment out every one of those imported files that your app does not use** ❗
+In `app/styles/fomantic/semantic.less`, Make sure you comment out every one of those imported files that your app does not use.
+
+```less
+
+/* Elements */
+& { @import "definitions/elements/button"; }    // My app uses fomantic-ui buttons
+& { @import "definitions/elements/container"; } // My app uses fomantic-ui containers
+
+// My app DOES NOT need these ⬇️ fomantic-ui elements
+// & { @import "definitions/elements/divider"; }
+// & { @import "definitions/elements/emoji"; }
+// & { @import "definitions/elements/flag"; }
+// & { @import "definitions/elements/header"; }
+// & { @import "definitions/elements/icon"; }
+// & { @import "definitions/elements/image"; }
+// & { @import "definitions/elements/input"; }
+// & { @import "definitions/elements/label"; }
+// & { @import "definitions/elements/list"; }
+// & { @import "definitions/elements/loader"; }
+// & { @import "definitions/elements/placeholder"; }
+// & { @import "definitions/elements/rail"; }
+// & { @import "definitions/elements/reveal"; }
+// & { @import "definitions/elements/segment"; }
+// & { @import "definitions/elements/step"; }
+// & { @import "definitions/elements/text"; }
+```
 
 ### Theming
 
