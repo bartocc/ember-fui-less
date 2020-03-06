@@ -14,7 +14,12 @@
     "index.js",
     "config/environment.js",
     "blueprints/ember-fui-less/files/__root__/styles/fomantic/.gitkeep",
-    "blueprints/ember-fui-less/index.js"
+    "blueprints/ember-fui-less/index.js",
+    "blueprints/fui-variables/index.js",
+    "blueprints/fui-variables/files/__root__/styles/fomantic/site/globals/.gitkeep",
+    "blueprints/fui-variables/files/__root__/styles/fomantic/site/elements/.gitkeep",
+    "blueprints/fui-variables/files/__root__/styles/fomantic/site/collections/.gitkeep",
+    "blueprints/fui-variables/files/__root__/styles/fomantic/site/views/.gitkeep"
   ],
   "license": "MIT",
   "author": "Julien Palmas",

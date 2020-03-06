@@ -22,13 +22,17 @@ module.exports = {
     }
   ],
 
+  files() {
+    return [this.file];
+  },
+
   normalizeEntityName(entityName) {
     // Normalize and validate entity name here
     return entityName;
   },
 
   beforeInstall(options) {
-    const { type, element, project, dummy } = options;
+    const { type, element, project } = options;
 
     if (!["global", "element", "collection", "view"].includes(type)) {
       this.ui.writeLine(
@@ -42,18 +46,8 @@ module.exports = {
     const fileName = `${element}.variables`;
     const filePathToResolve = `fomantic-ui-less/_site/${type}s/${fileName}`;
 
-    let appRoot = project.root;
-    if (dummy) appRoot = appRoot + "/tests/dummy";
-    const siteDir = appRoot + "/app/styles/fomantic/site";
-    const typeDir = `${siteDir}/${type}s`;
-    const destFile = `${typeDir}/${fileName}`;
-
-    [siteDir, typeDir].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        debug("creating %o directory", dir);
-        fs.mkdirSync(dir);
-      }
-    });
+    this.file = `__root__/styles/fomantic/site/${type}s/${fileName}`;
+    const destFile = `${project.root}/blueprints/fui-variables/files/${this.file}`;
 
     let srcFile;
     try {
