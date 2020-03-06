@@ -10,6 +10,12 @@
     "type": "git",
     "url": "git+ssh://git@github.com/bartocc/ember-fui-less.git"
   },
+  "files": [
+    "index.js",
+    "config/environment.js",
+    "blueprints/ember-fui-less/files/__root__/styles/fomantic/.gitkeep",
+    "blueprints/ember-fui-less/index.js"
+  ],
   "license": "MIT",
   "author": "Julien Palmas",
   "directories": {
