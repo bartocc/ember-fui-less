@@ -6639,6 +6639,7 @@ __metadata:
     auto-changelog: ^1.16.2
     babel-eslint: ^10.1.0
     broccoli-asset-rev: ^3.0.0
+    chalk: ^3.0.0
     copyfiles: ^2.2.0
     debug: ^4.1.1
     ember-auto-import: ^1.5.3
