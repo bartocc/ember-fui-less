@@ -23,6 +23,8 @@ to be able to `@import` the fomantic-ui-less source files from your app's less f
 - [Usage](#usage)
   - [Choosing what fomantic-ui definitions your app needs](#choosing-what-fomantic-ui-definitions-your-app-needs)
   - [Theming](#theming)
+    - [theming files: .variables](#theming-files-variables)
+    - [theming files: .overrides](#theming-files-overrides)
 - [Contributing](#contributing)
 - [License](#license)
 - [Credits](#credits)
@@ -92,6 +94,8 @@ You can easily use the [theming](https://fomantic-ui.com/usage/theming.html) sys
 
 This addon provides the `fui-theming` blueprint to generate the files necessary to customize the [site](https://fomantic-ui.com/usage/theming.html#sitewide-defaults) theme.
 
+#### theming files: .variables
+
 For example, you could start building the site theme of your application with:
 
 ```shell
@@ -117,6 +121,41 @@ and check the result by adding a primary button in one of your templates:
 Fomantic-ui has **MANY** variables available to configure your theme, and that can be quite overwhelming.
 The best way to grasp the power of theming is to read through the default theme variables file,
 for example [themes/default/globals/site.variables](https://github.com/fomantic/Fomantic-UI-LESS/blob/master/themes/default/globals/site.variables)
+
+#### theming files: .overrides
+
+You can also generate the `<element>.overrides` theming file if you need more CSS rules for the selectors defined by fomantic-ui.
+
+For example, here is the default fomantic-ui definition for the `.ui.active.button` selector:
+
+```less
+.ui.active.button {
+  background-color: @activeBackgroundColor;
+  background-image: @activeBackgroundImage;
+  box-shadow: @activeBoxShadow;
+  color: @activeColor;
+}
+```
+
+Let's say you need your active buttons to have a 3px solid border.
+Here is what you would need to do:
+
+```shell
+ember generate fui-theming --type="element" --element="button" --extension="overrides"
+```
+
+This would create the file `app/styles/fomantic/site/elements/button.overrides`.
+Now, you just need to enter this new `.ui.active.button` selector definition:
+
+```less
+.ui.active.button {
+  background-color: @activeBackgroundColor;
+  background-image: @activeBackgroundImage;
+  box-shadow: @activeBoxShadow;
+  color: @activeColor;
+  border: 3px solid;
+}
+```
 
 ## Contributing
 
