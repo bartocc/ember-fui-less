@@ -1,9 +1,29 @@
 const fs = require("fs");
 const path = require("path");
 const resolve = require("resolve");
+const bsplit = require("buffer-split");
 const debug = require("debug")(
   `ember-fui-less:blueprints:${path.basename(__dirname)}`
 );
+
+const _writeThemeConfig = function(dest) {
+  let filePath = resolve.sync("fomantic-ui-less/theme.config.example", {
+    basedir: __dirname
+  });
+  fs.copyFileSync(filePath, dest);
+};
+
+const _writeSemanticLess = function(dest) {
+  let filePath = resolve.sync("fomantic-ui-less/semantic.less", {
+    basedir: __dirname
+  });
+
+  let buffer = fs.readFileSync(filePath);
+  fs.writeFileSync(
+    dest,
+    bsplit(buffer, Buffer.from("/* Modules */"))[0].toString()
+  );
+};
 
 module.exports = {
   normalizeEntityName() {},
@@ -30,23 +50,8 @@ module.exports = {
 
     const fomanticDestDir = `__root__/styles/fomantic`;
 
-    // Resolve the path of fomantic-ui-less/theme.config.example and copy the file
-    // to the blueprints files dir with name theme.config
-    let res = resolve.sync("fomantic-ui-less/theme.config.example", {
-      basedir: __dirname
-    });
-    fs.copyFileSync(res, `${this.filesPath()}/${fomanticDestDir}/theme.config`);
-
-    // res = resolve.sync('fomantic-ui-less/_site/globals/site.variables', { basedir: __dirname });
-    // fs.copyFileSync(res, `${this.filesPath()}/${fomanticDestDir}/site/globals/site.variables`);
-
-    res = resolve.sync("fomantic-ui-less/semantic.less", {
-      basedir: __dirname
-    });
-    fs.copyFileSync(
-      res,
-      `${this.filesPath()}/${fomanticDestDir}/semantic.less`
-    );
+    _writeThemeConfig(`${this.filesPath()}/${fomanticDestDir}/theme.config`);
+    _writeSemanticLess(`${this.filesPath()}/${fomanticDestDir}/semantic.less`);
 
     await this.insertIntoFile(
       `${locals.fileMap["__root__"]}/styles/app.less`,

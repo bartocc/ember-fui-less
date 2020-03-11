@@ -4534,6 +4534,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"buffer-indexof@npm:~0.0.0":
+  version: 0.0.2
+  resolution: "buffer-indexof@npm:0.0.2"
+  checksum: 2/32783065f321ca3885a2c2830002d4c137fcd78d16fbde7083aa9b2827d0d99895ec5886a7aef06019415ac755f7181ec2dc992e0292d83d1e49241125da9d15
+  languageName: node
+  linkType: hard
+
+"buffer-split@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "buffer-split@npm:1.0.0"
+  dependencies:
+    buffer-indexof: ~0.0.0
+  checksum: 2/e28aa9329ad55644d4749014a710306ef7f85be0f8f5f0c35c889ed5e237e907867748122e41f19acbe16808f304e40c4b9a22710fd880c4ad0c1e884320dfbf
+  languageName: node
+  linkType: hard
+
 "buffer-xor@npm:^1.0.3":
   version: 1.0.3
   resolution: "buffer-xor@npm:1.0.3"
@@ -6647,6 +6663,7 @@ __metadata:
     auto-changelog: ^1.16.2
     babel-eslint: ^10.1.0
     broccoli-asset-rev: ^3.0.0
+    buffer-split: ^1.0.0
     chalk: ^3.0.0
     copyfiles: ^2.2.0
     debug: ^4.1.1
