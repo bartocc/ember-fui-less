@@ -6760,7 +6760,7 @@ __metadata:
     fomantic-ui-less: ^2.8.4
     loader.js: ^4.7.0
     qunit-dom: ^1.1.0
-    release-it: ^13.1.0
+    release-it: ^13.1.1
     resolve: ^1.15.1
   languageName: unknown
   linkType: soft
@@ -12988,9 +12988,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"release-it@npm:^13.1.0":
-  version: 13.1.0
-  resolution: "release-it@npm:13.1.0"
+"release-it@npm:^13.1.1":
+  version: 13.1.1
+  resolution: "release-it@npm:13.1.1"
   dependencies:
     "@iarna/toml": 2.2.3
     "@octokit/rest": 17.1.0
@@ -13025,7 +13025,7 @@ __metadata:
     yargs-parser: 18.1.0
   bin:
     release-it: bin/release-it.js
-  checksum: 2/7e76be15f24d22ee2f98e0b92e217e09cb0d21cfd33ce33ccbd603e01e429b2881ce666675524dd37f07fb4b98ee680d40c35047f2eb5580fb34e8417d0aa09c
+  checksum: 2/ed874a6f89722e7b13c38860684b2d96a79d75335953bf6646041dd5b35359df080b9afa95aa509f2e248b9e384d87e933d5fde105efe41a58ab41693e3e8403
   languageName: node
   linkType: hard
 
