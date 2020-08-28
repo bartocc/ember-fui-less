@@ -47,7 +47,7 @@
     "resolve": "^1.15.1"
   },
   "devDependencies": {
-    "@ember/optional-features": "^1.1.0",
+    "@ember/optional-features": "^2.0.0",
     "@glimmer/component": "^1.0.0",
     "auto-changelog": "^2.0.0",
     "babel-eslint": "^10.1.0",
